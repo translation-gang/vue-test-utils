@@ -1,0 +1,1248 @@
+
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Using with Vuex · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-theme-vuejs/vue.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../api/" />
+    
+    
+    <link rel="prev" href="testing-SFCs-with-mocha-webpack.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+<script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=vuejs" id="_carbonads_js"></script>
+
+
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Table of Contents</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Guides
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="getting-started.html">
+            
+                <a href="getting-started.html">
+            
+                    
+                    Getting Started
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="common-tips.html">
+            
+                <a href="common-tips.html">
+            
+                    
+                    Common Tips
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="choosing-a-test-runner.html">
+            
+                <a href="choosing-a-test-runner.html">
+            
+                    
+                    Choosing a test runner
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="testing-SFCs-with-jest.html">
+            
+                <a href="testing-SFCs-with-jest.html">
+            
+                    
+                    Testing SFCs with Jest
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="testing-SFCs-with-mocha-webpack.html">
+            
+                <a href="testing-SFCs-with-mocha-webpack.html">
+            
+                    
+                    Testing SFCs with Mocha + webpack
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.6" data-path="using-with-vuex.html">
+            
+                <a href="using-with-vuex.html">
+            
+                    
+                    Using with Vuex
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../api/">
+            
+                <a href="../api/">
+            
+                    
+                    API
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../api/mount.html">
+            
+                <a href="../api/mount.html">
+            
+                    
+                    mount
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../api/shallow.html">
+            
+                <a href="../api/shallow.html">
+            
+                    
+                    shallow
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../api/options.html">
+            
+                <a href="../api/options.html">
+            
+                    
+                    Mounting Options
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.1" data-path="../api/options.html">
+            
+                <a href="../api/options.html#context">
+            
+                    
+                    context
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2" data-path="../api/options.html">
+            
+                <a href="../api/options.html#slots">
+            
+                    
+                    slots
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.3" data-path="../api/options.html">
+            
+                <a href="../api/options.html#stubs">
+            
+                    
+                    stubs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.4" data-path="../api/options.html">
+            
+                <a href="../api/options.html#mocks">
+            
+                    
+                    mocks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.5" data-path="../api/options.html">
+            
+                <a href="../api/options.html#localvue">
+            
+                    
+                    localVue
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.6" data-path="../api/options.html">
+            
+                <a href="../api/options.html#attachtodocument">
+            
+                    
+                    attachToDocument
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.7" data-path="../api/options.html">
+            
+                <a href="../api/options.html#attrs">
+            
+                    
+                    attrs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.8" data-path="../api/options.html">
+            
+                <a href="../api/options.html#listeners">
+            
+                    
+                    listeners
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.9" data-path="../api/options.html">
+            
+                <a href="../api/options.html#clone">
+            
+                    
+                    clone
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../api/wrapper/">
+            
+                <a href="../api/wrapper/">
+            
+                    
+                    Wrapper
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.4.1" data-path="../api/wrapper/contains.html">
+            
+                <a href="../api/wrapper/contains.html">
+            
+                    
+                    contains
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.2" data-path="../api/wrapper/emitted.html">
+            
+                <a href="../api/wrapper/emitted.html">
+            
+                    
+                    emitted
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.3" data-path="../api/wrapper/emittedByOrder.html">
+            
+                <a href="../api/wrapper/emittedByOrder.html">
+            
+                    
+                    emittedByOrder
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.4" data-path="../api/wrapper/find.html">
+            
+                <a href="../api/wrapper/find.html">
+            
+                    
+                    find
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.5" data-path="../api/wrapper/findAll.html">
+            
+                <a href="../api/wrapper/findAll.html">
+            
+                    
+                    findAll
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.6" data-path="../api/wrapper/hasAttribute.html">
+            
+                <a href="../api/wrapper/hasAttribute.html">
+            
+                    
+                    hasAttribute
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.7" data-path="../api/wrapper/hasClass.html">
+            
+                <a href="../api/wrapper/hasClass.html">
+            
+                    
+                    hasClass
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.8" data-path="../api/wrapper/hasProp.html">
+            
+                <a href="../api/wrapper/hasProp.html">
+            
+                    
+                    hasProp
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.9" data-path="../api/wrapper/hasStyle.html">
+            
+                <a href="../api/wrapper/hasStyle.html">
+            
+                    
+                    hasStyle
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.10" data-path="../api/wrapper/html.html">
+            
+                <a href="../api/wrapper/html.html">
+            
+                    
+                    html
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.11" data-path="../api/wrapper/is.html">
+            
+                <a href="../api/wrapper/is.html">
+            
+                    
+                    is
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.12" data-path="../api/wrapper/isEmpty.html">
+            
+                <a href="../api/wrapper/isEmpty.html">
+            
+                    
+                    isEmpty
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.13" data-path="../api/wrapper/isVueInstance.html">
+            
+                <a href="../api/wrapper/isVueInstance.html">
+            
+                    
+                    isVueInstance
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.14" data-path="../api/wrapper/name.html">
+            
+                <a href="../api/wrapper/name.html">
+            
+                    
+                    name
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.15" data-path="../api/wrapper/setData.html">
+            
+                <a href="../api/wrapper/setData.html">
+            
+                    
+                    setData
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.16" data-path="../api/wrapper/setMethods.html">
+            
+                <a href="../api/wrapper/setMethods.html">
+            
+                    
+                    setMethods
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.17" data-path="../api/wrapper/setProps.html">
+            
+                <a href="../api/wrapper/setProps.html">
+            
+                    
+                    setProps
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.18" data-path="../api/wrapper/text.html">
+            
+                <a href="../api/wrapper/text.html">
+            
+                    
+                    text
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.19" data-path="../api/wrapper/trigger.html">
+            
+                <a href="../api/wrapper/trigger.html">
+            
+                    
+                    trigger
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.20" data-path="../api/wrapper/update.html">
+            
+                <a href="../api/wrapper/update.html">
+            
+                    
+                    update
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../api/wrapper-array/">
+            
+                <a href="../api/wrapper-array/">
+            
+                    
+                    WrapperArray
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.5.1" data-path="../api/wrapper-array/at.html">
+            
+                <a href="../api/wrapper-array/at.html">
+            
+                    
+                    at
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.2" data-path="../api/wrapper-array/contains.html">
+            
+                <a href="../api/wrapper-array/contains.html">
+            
+                    
+                    contains
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.3" data-path="../api/wrapper-array/hasAttribute.html">
+            
+                <a href="../api/wrapper-array/hasAttribute.html">
+            
+                    
+                    hasAttribute
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.4" data-path="../api/wrapper-array/hasClass.html">
+            
+                <a href="../api/wrapper-array/hasClass.html">
+            
+                    
+                    hasClass
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.5" data-path="../api/wrapper-array/hasProp.html">
+            
+                <a href="../api/wrapper-array/hasProp.html">
+            
+                    
+                    hasProp
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.6" data-path="../api/wrapper-array/hasStyle.html">
+            
+                <a href="../api/wrapper-array/hasStyle.html">
+            
+                    
+                    hasStyle
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.7" data-path="../api/wrapper-array/is.html">
+            
+                <a href="../api/wrapper-array/is.html">
+            
+                    
+                    is
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.8" data-path="../api/wrapper-array/isEmpty.html">
+            
+                <a href="../api/wrapper-array/isEmpty.html">
+            
+                    
+                    isEmpty
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.9" data-path="../api/wrapper-array/isVueInstance.html">
+            
+                <a href="../api/wrapper-array/isVueInstance.html">
+            
+                    
+                    isVueInstance
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.10" data-path="../api/wrapper-array/setData.html">
+            
+                <a href="../api/wrapper-array/setData.html">
+            
+                    
+                    setData
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.11" data-path="../api/wrapper-array/setMethods.html">
+            
+                <a href="../api/wrapper-array/setMethods.html">
+            
+                    
+                    setMethods
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.12" data-path="../api/wrapper-array/setProps.html">
+            
+                <a href="../api/wrapper-array/setProps.html">
+            
+                    
+                    setProps
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.13" data-path="../api/wrapper-array/trigger.html">
+            
+                <a href="../api/wrapper-array/trigger.html">
+            
+                    
+                    trigger
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.14" data-path="../api/wrapper-array/update.html">
+            
+                <a href="../api/wrapper-array/update.html">
+            
+                    
+                    update
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../api/selectors.html">
+            
+                <a href="../api/selectors.html">
+            
+                    
+                    Selectors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../api/createLocalVue.html">
+            
+                <a href="../api/createLocalVue.html">
+            
+                    
+                    createLocalVue
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Using with Vuex</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="using-with-vuex">Using with Vuex</h1>
+<h2 id="mocking-actions">Mocking Actions</h2>
+<p>Let&#x2019;s look at some code.</p>
+<p>This is the component we want to test. It calls Vuex actions.</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-align-center&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> @<span class="hljs-attr">input</span>=<span class="hljs-string">&quot;actionInputIfTrue&quot;</span> /&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">&quot;actionClick()&quot;</span>&gt;</span>Click<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+<span class="hljs-keyword">import</span> { mapActions } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;vuex&apos;</span>
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span>{
+  methods: {
+    ...mapActions([
+      <span class="hljs-string">&apos;actionClick&apos;</span>
+    ]),
+    actionInputIfTrue: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">actionInputIfTrue</span> (<span class="hljs-params">event</span>) </span>{
+      <span class="hljs-keyword">const</span> inputValue = event.target.value
+      <span class="hljs-keyword">if</span> (inputValue === <span class="hljs-string">&apos;input&apos;</span>) {
+        <span class="hljs-keyword">this</span>.$store.dispatch(<span class="hljs-string">&apos;actionInput&apos;</span>, { inputValue })
+      }
+    }
+  }
+}
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<p>For the purposes of this test, we don&#x2019;t care what the actions do, or what the store looks like. We just need to know that these actions are being fired when they should, and that they are fired with the expected value.</p>
+<p>To test this, we need to pass a mock store to Vue when we mount our component.</p>
+<p>Let&#x2019;s see what this looks like:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> Vue <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;vue&apos;</span>
+<span class="hljs-keyword">import</span> { mount } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;vue-test-utils&apos;</span>
+<span class="hljs-keyword">import</span> sinon <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;sinon&apos;</span>
+<span class="hljs-keyword">import</span> { expect } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;chai&apos;</span>
+<span class="hljs-keyword">import</span> Vuex <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;vuex&apos;</span>
+<span class="hljs-keyword">import</span> <span class="hljs-string">&apos;babel-polyfill&apos;</span>
+<span class="hljs-keyword">import</span> Actions <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../../../src/components/Actions&apos;</span>
+
+Vue.use(Vuex)
+
+describe(<span class="hljs-string">&apos;Actions.vue&apos;</span>, () =&gt; {
+  <span class="hljs-keyword">let</span> actions
+  <span class="hljs-keyword">let</span> store
+
+  beforeEach(() =&gt; {
+    actions = {
+      actionClick: sinon.stub(),
+      actionInput: sinon.stub()
+    }
+    store = <span class="hljs-keyword">new</span> Vuex.Store({
+      state: {},
+      actions
+    })
+  })
+
+  it(<span class="hljs-string">&apos;calls store action actionInput when input value is input and an input even is fired&apos;</span>, () =&gt; {
+    <span class="hljs-keyword">const</span> wrapper = mount(Actions, { store })
+    <span class="hljs-keyword">const</span> input = wrapper.find(<span class="hljs-string">&apos;input&apos;</span>)[<span class="hljs-number">0</span>]
+    input.element.value = <span class="hljs-string">&apos;input&apos;</span>
+    input.trigger(<span class="hljs-string">&apos;input&apos;</span>)
+    expect(actions.actionInput.calledOnce).toBe(<span class="hljs-literal">true</span>)
+  })
+
+  it(<span class="hljs-string">&apos;does not call store action actionInput when input value is not input and an input even is fired&apos;</span>, () =&gt; {
+    <span class="hljs-keyword">const</span> wrapper = mount(Actions, { store })
+    <span class="hljs-keyword">const</span> input = wrapper.find(<span class="hljs-string">&apos;input&apos;</span>)[<span class="hljs-number">0</span>]
+    input.element.value = <span class="hljs-string">&apos;not input&apos;</span>
+    input.trigger(<span class="hljs-string">&apos;input&apos;</span>)
+    expect(actions.actionInput.calledOnce).toBe(<span class="hljs-literal">false</span>)
+  })
+
+  it(<span class="hljs-string">&apos;calls store action actionClick when button is clicked&apos;</span>, () =&gt; {
+    <span class="hljs-keyword">const</span> wrapper = mount(Actions, { store })
+    wrapper.find(<span class="hljs-string">&apos;button&apos;</span>)[<span class="hljs-number">0</span>].trigger(<span class="hljs-string">&apos;click&apos;</span>)
+    expect(actions.actionClick.calledOnce).toBe(<span class="hljs-literal">true</span>)
+  })
+})
+</code></pre>
+<p>What&#x2019;s happening here? First we tell Vue to use Vuex with the Vue.use method. This is just a wrapper around Vue.use.</p>
+<p>We then make a mock store by calling new Vuex.store with our mock values. We only pass it the actions, since that&#x2019;s all we care about.</p>
+<p>The actions are <a href="http://sinonjs.org/" target="_blank">sinon stubs</a>. The stubs give us methods to assert whether the actions were called or not.</p>
+<p>We can then assert in our tests that the action stub was called when expected.</p>
+<p>Now the way we define the store might look a bit foreign to you.</p>
+<p>We&#x2019;re using beforeEach to ensure we have a clean store before each test. beforeEach is a mocha hook that&#x2019;s called before each test. In our test, we are reassigning the store variables value. If we didn&#x2019;t do this, the sinon stubs would need to be automatically reset. It also lets us change the state in our tests, without it affecting later tests.</p>
+<p>The most important thing to note in this test is that <strong>we create a mock Vuex store and then pass it to vue-test-utils</strong>.</p>
+<p>Great, so now we can mock actions, let&#x2019;s look at mocking getters.</p>
+<h2 id="mocking-getters">Mocking Getters</h2>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">v-if</span>=<span class="hljs-string">&quot;inputValue&quot;</span>&gt;</span>{{inputValue}}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">v-if</span>=<span class="hljs-string">&quot;clicks&quot;</span>&gt;</span>{{clicks}}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+<span class="hljs-keyword">import</span> { mapGetters } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;vuex&apos;</span>
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span>{
+  computed: mapGetters([
+    <span class="hljs-string">&apos;clicks&apos;</span>,
+    <span class="hljs-string">&apos;inputValue&apos;</span>
+  ])
+}
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<p>This is a fairly simple component. It renders the result of the getters clicks and inputValue. Again, we don&#x2019;t really care about what those getters returns &#x2013; just that the result of them is being rendered correctly.</p>
+<p>Let&#x2019;s see the test:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> <span class="hljs-string">&apos;babel-polyfill&apos;</span>
+<span class="hljs-keyword">import</span> Vue <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;vue&apos;</span>
+<span class="hljs-keyword">import</span> { mount } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;vue-test-utils&apos;</span>
+<span class="hljs-keyword">import</span> { expect } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;chai&apos;</span>
+<span class="hljs-keyword">import</span> Vuex <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;vuex&apos;</span>
+<span class="hljs-keyword">import</span> Actions <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../../../src/components/Getters&apos;</span>
+
+Vue.use(Vuex)
+
+describe(<span class="hljs-string">&apos;Getters.vue&apos;</span>, () =&gt; {
+  <span class="hljs-keyword">let</span> getters
+  <span class="hljs-keyword">let</span> store
+
+  beforeEach(() =&gt; {
+    getters = {
+      clicks: () =&gt; <span class="hljs-number">2</span>,
+      inputValue: () =&gt; <span class="hljs-string">&apos;input&apos;</span>
+    }
+
+    store = <span class="hljs-keyword">new</span> Vuex.Store({
+      getters
+    })
+  })
+
+  it(<span class="hljs-string">&apos;Renders state.inputValue in first p tag&apos;</span>, () =&gt; {
+    <span class="hljs-keyword">const</span> wrapper = mount(Actions, { store })
+    <span class="hljs-keyword">const</span> p = wrapper.find(<span class="hljs-string">&apos;p&apos;</span>)[<span class="hljs-number">0</span>]
+    expect(p.text()).toBe(getters.inputValue())
+  })
+
+  it(<span class="hljs-string">&apos;Renders state.clicks in second p tag&apos;</span>, () =&gt; {
+    <span class="hljs-keyword">const</span> wrapper = mount(Actions, { store })
+    <span class="hljs-keyword">const</span> p = wrapper.find(<span class="hljs-string">&apos;p&apos;</span>)[<span class="hljs-number">1</span>]
+    expect(p.text()).toBe(getters.clicks().toString())
+  })
+})
+</code></pre>
+<p>This test is similar to our actions test. We create a mock store before each test, pass it as an option when we call mount, and assert that the value returned by our mock getters is being rendered.</p>
+<p>This is great, but what if we want to check our getters are returning the correct part of our state?</p>
+<h2 id="mocking-with-modules">Mocking with Modules</h2>
+<p><a href="https://vuex.vuejs.org/en/modules.html" target="_blank">Modules</a> are useful for separating out our store into manageable chunks. They also export getters. We can use these in our tests.</p>
+<p>Let&#x2019;s look at our component:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">&quot;moduleActionClick()&quot;</span>&gt;</span>Click<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>{{moduleClicks}}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+<span class="hljs-keyword">import</span> { mapActions, mapGetters } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;vuex&apos;</span>
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span>{
+  methods: {
+    ...mapActions([
+      <span class="hljs-string">&apos;moduleActionClick&apos;</span>
+    ])
+  },
+
+  computed: mapGetters([
+    <span class="hljs-string">&apos;moduleClicks&apos;</span>
+  ])
+}
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<p>Simple component that includes one action and one getter.</p>
+<p>And the test:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> Vue <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;vue&apos;</span>
+<span class="hljs-keyword">import</span> { mount } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;vue-test-utils&apos;</span>
+<span class="hljs-keyword">import</span> sinon <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;sinon&apos;</span>
+<span class="hljs-keyword">import</span> { expect } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;chai&apos;</span>
+<span class="hljs-keyword">import</span> Vuex <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;vuex&apos;</span>
+<span class="hljs-keyword">import</span> <span class="hljs-string">&apos;babel-polyfill&apos;</span>
+<span class="hljs-keyword">import</span> Modules <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../../../src/components/Modules&apos;</span>
+<span class="hljs-keyword">import</span> <span class="hljs-built_in">module</span> <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../../../src/store/module&apos;</span>
+
+Vue.use(Vuex)
+
+describe(<span class="hljs-string">&apos;Modules.vue&apos;</span>, () =&gt; {
+  <span class="hljs-keyword">let</span> actions
+  <span class="hljs-keyword">let</span> state
+  <span class="hljs-keyword">let</span> store
+
+  beforeEach(() =&gt; {
+    state = {
+      <span class="hljs-built_in">module</span>: {
+        clicks: <span class="hljs-number">2</span>
+      }
+    }
+
+    actions = {
+      moduleActionClick: sinon.stub()
+    }
+
+    store = <span class="hljs-keyword">new</span> Vuex.Store({
+      state,
+      actions,
+      getters: <span class="hljs-built_in">module</span>.getters
+    })
+  })
+
+  it(<span class="hljs-string">&apos;calls store action moduleActionClick when button is clicked&apos;</span>, () =&gt; {
+    <span class="hljs-keyword">const</span> wrapper = mount(Modules, { store })
+    <span class="hljs-keyword">const</span> button = wrapper.find(<span class="hljs-string">&apos;button&apos;</span>)[<span class="hljs-number">0</span>]
+    button.trigger(<span class="hljs-string">&apos;click&apos;</span>)
+    expect(actions.moduleActionClick.calledOnce).toBe(<span class="hljs-literal">true</span>)
+  })
+
+  it(<span class="hljs-string">&apos;Renders state.inputValue in first p tag&apos;</span>, () =&gt; {
+    <span class="hljs-keyword">const</span> wrapper = mount(Modules, { store })
+    <span class="hljs-keyword">const</span> p = wrapper.find(<span class="hljs-string">&apos;p&apos;</span>)[<span class="hljs-number">0</span>]
+    expect(p.text()).toBe(state.module.clicks.toString())
+  })
+})
+</code></pre>
+<p>To have a look at what the module file looks like, <a href="https://github.com/eddyerburgh/mock-vuex-in-vue-unit-tests-tutorial" target="_blank">check out the repo</a>.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="testing-SFCs-with-mocha-webpack.html" class="navigation navigation-prev " aria-label="Previous page: Testing SFCs with Mocha + webpack">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../api/" class="navigation navigation-next " aria-label="Next page: API">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Using with Vuex","level":"1.2.6","depth":2,"next":{"title":"API","level":"1.3","depth":1,"path":"api/README.md","ref":"api/README.md","articles":[{"title":"mount","level":"1.3.1","depth":2,"path":"api/mount.md","ref":"api/mount.md","articles":[]},{"title":"shallow","level":"1.3.2","depth":2,"path":"api/shallow.md","ref":"api/shallow.md","articles":[]},{"title":"Mounting Options","level":"1.3.3","depth":2,"path":"api/options.md","ref":"api/options.md","articles":[{"title":"context","level":"1.3.3.1","depth":3,"anchor":"#context","path":"api/options.md","ref":"api/options.md#context","articles":[]},{"title":"slots","level":"1.3.3.2","depth":3,"anchor":"#slots","path":"api/options.md","ref":"api/options.md#slots","articles":[]},{"title":"stubs","level":"1.3.3.3","depth":3,"anchor":"#stubs","path":"api/options.md","ref":"api/options.md#stubs","articles":[]},{"title":"mocks","level":"1.3.3.4","depth":3,"anchor":"#mocks","path":"api/options.md","ref":"api/options.md#mocks","articles":[]},{"title":"localVue","level":"1.3.3.5","depth":3,"anchor":"#localvue","path":"api/options.md","ref":"api/options.md#localvue","articles":[]},{"title":"attachToDocument","level":"1.3.3.6","depth":3,"anchor":"#attachtodocument","path":"api/options.md","ref":"api/options.md#attachtodocument","articles":[]},{"title":"attrs","level":"1.3.3.7","depth":3,"anchor":"#attrs","path":"api/options.md","ref":"api/options.md#attrs","articles":[]},{"title":"listeners","level":"1.3.3.8","depth":3,"anchor":"#listeners","path":"api/options.md","ref":"api/options.md#listeners","articles":[]},{"title":"clone","level":"1.3.3.9","depth":3,"anchor":"#clone","path":"api/options.md","ref":"api/options.md#clone","articles":[]}]},{"title":"Wrapper","level":"1.3.4","depth":2,"path":"api/wrapper/README.md","ref":"api/wrapper/README.md","articles":[{"title":"contains","level":"1.3.4.1","depth":3,"path":"api/wrapper/contains.md","ref":"api/wrapper/contains.md","articles":[]},{"title":"emitted","level":"1.3.4.2","depth":3,"path":"api/wrapper/emitted.md","ref":"api/wrapper/emitted.md","articles":[]},{"title":"emittedByOrder","level":"1.3.4.3","depth":3,"path":"api/wrapper/emittedByOrder.md","ref":"api/wrapper/emittedByOrder.md","articles":[]},{"title":"find","level":"1.3.4.4","depth":3,"path":"api/wrapper/find.md","ref":"api/wrapper/find.md","articles":[]},{"title":"findAll","level":"1.3.4.5","depth":3,"path":"api/wrapper/findAll.md","ref":"api/wrapper/findAll.md","articles":[]},{"title":"hasAttribute","level":"1.3.4.6","depth":3,"path":"api/wrapper/hasAttribute.md","ref":"api/wrapper/hasAttribute.md","articles":[]},{"title":"hasClass","level":"1.3.4.7","depth":3,"path":"api/wrapper/hasClass.md","ref":"api/wrapper/hasClass.md","articles":[]},{"title":"hasProp","level":"1.3.4.8","depth":3,"path":"api/wrapper/hasProp.md","ref":"api/wrapper/hasProp.md","articles":[]},{"title":"hasStyle","level":"1.3.4.9","depth":3,"path":"api/wrapper/hasStyle.md","ref":"api/wrapper/hasStyle.md","articles":[]},{"title":"html","level":"1.3.4.10","depth":3,"path":"api/wrapper/html.md","ref":"api/wrapper/html.md","articles":[]},{"title":"is","level":"1.3.4.11","depth":3,"path":"api/wrapper/is.md","ref":"api/wrapper/is.md","articles":[]},{"title":"isEmpty","level":"1.3.4.12","depth":3,"path":"api/wrapper/isEmpty.md","ref":"api/wrapper/isEmpty.md","articles":[]},{"title":"isVueInstance","level":"1.3.4.13","depth":3,"path":"api/wrapper/isVueInstance.md","ref":"api/wrapper/isVueInstance.md","articles":[]},{"title":"name","level":"1.3.4.14","depth":3,"path":"api/wrapper/name.md","ref":"api/wrapper/name.md","articles":[]},{"title":"setData","level":"1.3.4.15","depth":3,"path":"api/wrapper/setData.md","ref":"api/wrapper/setData.md","articles":[]},{"title":"setMethods","level":"1.3.4.16","depth":3,"path":"api/wrapper/setMethods.md","ref":"api/wrapper/setMethods.md","articles":[]},{"title":"setProps","level":"1.3.4.17","depth":3,"path":"api/wrapper/setProps.md","ref":"api/wrapper/setProps.md","articles":[]},{"title":"text","level":"1.3.4.18","depth":3,"path":"api/wrapper/text.md","ref":"api/wrapper/text.md","articles":[]},{"title":"trigger","level":"1.3.4.19","depth":3,"path":"api/wrapper/trigger.md","ref":"api/wrapper/trigger.md","articles":[]},{"title":"update","level":"1.3.4.20","depth":3,"path":"api/wrapper/update.md","ref":"api/wrapper/update.md","articles":[]}]},{"title":"WrapperArray","level":"1.3.5","depth":2,"path":"api/wrapper-array/README.md","ref":"api/wrapper-array/README.md","articles":[{"title":"at","level":"1.3.5.1","depth":3,"path":"api/wrapper-array/at.md","ref":"api/wrapper-array/at.md","articles":[]},{"title":"contains","level":"1.3.5.2","depth":3,"path":"api/wrapper-array/contains.md","ref":"api/wrapper-array/contains.md","articles":[]},{"title":"hasAttribute","level":"1.3.5.3","depth":3,"path":"api/wrapper-array/hasAttribute.md","ref":"api/wrapper-array/hasAttribute.md","articles":[]},{"title":"hasClass","level":"1.3.5.4","depth":3,"path":"api/wrapper-array/hasClass.md","ref":"api/wrapper-array/hasClass.md","articles":[]},{"title":"hasProp","level":"1.3.5.5","depth":3,"path":"api/wrapper-array/hasProp.md","ref":"api/wrapper-array/hasProp.md","articles":[]},{"title":"hasStyle","level":"1.3.5.6","depth":3,"path":"api/wrapper-array/hasStyle.md","ref":"api/wrapper-array/hasStyle.md","articles":[]},{"title":"is","level":"1.3.5.7","depth":3,"path":"api/wrapper-array/is.md","ref":"api/wrapper-array/is.md","articles":[]},{"title":"isEmpty","level":"1.3.5.8","depth":3,"path":"api/wrapper-array/isEmpty.md","ref":"api/wrapper-array/isEmpty.md","articles":[]},{"title":"isVueInstance","level":"1.3.5.9","depth":3,"path":"api/wrapper-array/isVueInstance.md","ref":"api/wrapper-array/isVueInstance.md","articles":[]},{"title":"setData","level":"1.3.5.10","depth":3,"path":"api/wrapper-array/setData.md","ref":"api/wrapper-array/setData.md","articles":[]},{"title":"setMethods","level":"1.3.5.11","depth":3,"path":"api/wrapper-array/setMethods.md","ref":"api/wrapper-array/setMethods.md","articles":[]},{"title":"setProps","level":"1.3.5.12","depth":3,"path":"api/wrapper-array/setProps.md","ref":"api/wrapper-array/setProps.md","articles":[]},{"title":"trigger","level":"1.3.5.13","depth":3,"path":"api/wrapper-array/trigger.md","ref":"api/wrapper-array/trigger.md","articles":[]},{"title":"update","level":"1.3.5.14","depth":3,"path":"api/wrapper-array/update.md","ref":"api/wrapper-array/update.md","articles":[]}]},{"title":"Selectors","level":"1.3.6","depth":2,"path":"api/selectors.md","ref":"api/selectors.md","articles":[]},{"title":"createLocalVue","level":"1.3.7","depth":2,"path":"api/createLocalVue.md","ref":"api/createLocalVue.md","articles":[]}]},"previous":{"title":"Testing SFCs with Mocha + webpack","level":"1.2.5","depth":2,"path":"guides/testing-SFCs-with-mocha-webpack.md","ref":"guides/testing-SFCs-with-mocha-webpack.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","theme-vuejs","-fontsettings","github"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"edit-link":{"label":"Edit This Page","base":"https://github.com/vuejs/vue-test-utils/edit/master/docs"},"github":{"url":"https://github.com/vuejs/vue-test-utils/"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-vuejs":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"en","links":{"sharing":{"facebook":false,"twitter":false}},"gitbook":"*"},"file":{"path":"guides/using-with-vuex.md","mtime":"2017-10-01T22:03:01.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-10-01T22:07:57.093Z"},"basePath":"..","book":{"language":"en"}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+
+    </body>
+</html>
+
